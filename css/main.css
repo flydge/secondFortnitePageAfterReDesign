@@ -4,7 +4,6 @@ main .middleContent {
     display: flex;
     justify-content: center; }
 main .middleContent-container {
-    width: 900px;
     padding-top: 80px;
     box-shadow: 0 0px 35px rgba(0, 0, 0, 0.25);
     margin-bottom: 200px;
@@ -47,7 +46,6 @@ main .middleContent-container .modeImage {
 body main .topContent {
   font-family: Open Sans, sans-serif;
   width: 100%;
-  height: 450px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -57,7 +55,6 @@ body main .topContent {
   body main .topContent-container {
     margin: 20px 50px;
     margin-bottom: 0;
-    height: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -67,13 +64,20 @@ body main .topContent {
       margin-top: 40px;
       color: white;
       font-weight: bold;
-      font-size: 2rem; }
+      font-size: 2rem;
+      text-align: center;
+        }
     body main .topContent-container-links {
       display: flex;
       background-color: rgba(0, 0, 0, 0.25);
       border: 1px solid rgba(255, 255, 255, 0.25);
       color: white;
-      border-radius: 30px; }
+      border-radius: 30px;
+      margin-bottom: 30px;
+        margin-top: 30px;
+
+
+    ;}
       body main .topContent-container-links-link {
         padding: 5px 20px;
         border: 2px solid rgba(255, 255, 255, 0); }
@@ -83,28 +87,38 @@ body main .topContent {
           border-radius: 30px; }
     body main .topContent-container-navigation {
       padding: 30px 30px 0px 30px;
-      width: 900px;
-      height: 170px;
       border-radius: 20px 20px 0 0;
       background: rgba(153, 153, 153, 0.20);
       box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
-      justify-content: space-between; }
+      justify-content: space-between;
+
+    }
       body main .topContent-container-navigation-topRow {
         display: flex;
-        justify-content: space-between; }
+        flex-wrap: wrap;
+        justify-content: space-around; }
         body main .topContent-container-navigation-topRow-searchInput {
           position: relative;
-          display: flex; }
+          display: flex;
+          padding-right: 30px;
+        }
           body main .topContent-container-navigation-topRow-searchInput input {
             background: none;
             padding: 10px 15px;
             padding-right: 40px;
             border-radius: 30px;
             border: 1px solid #c4c4c4;
+
             color: white; }
+          body main .topContent-container-navigation-topRow-searchInput input:focus {
+            border-radius: 30px;
+            background-color: rgba(0, 0, 0, 0.45);
+            box-shadow: 0 0 20px 1px #afd6ff;
+            outline: none;
+          }
           body main .topContent-container-navigation-topRow-searchInput input::placeholder {
             color: white; }
           body main .topContent-container-navigation-topRow-searchInput .icon-search {
@@ -113,16 +127,15 @@ body main .topContent {
             margin-top: 8px;
             font-size: 1rem; }
         body main .topContent-container-navigation-topRow-dropdowns {
-          display: flex; }
+          display: flex;
+          flex-wrap: wrap;
+        }
           body main .topContent-container-navigation-topRow-dropdowns-dropdown {
             position: relative;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin-right: 5px; }
-          body main .topContent-container-navigation-topRow-dropdowns-dropdown:hover{
-            color: black;
-          }
+           /* margin-right: 5px;*/ }
             body main .topContent-container-navigation-topRow-dropdowns-dropdown_button {
               position: relative;
               outline: none;
@@ -134,17 +147,15 @@ body main .topContent {
               align-items: center;
               color: white;
               z-index: 10;
-              height: 2.5rem; 
+              height: 2.5rem;
             }
-              body main .topContent-container-navigation-topRow-dropdowns-dropdown_button:hover {
-                background-color: #fff;
-                color: black;
-             }
+
               body main .topContent-container-navigation-topRow-dropdowns-dropdown_button .label {
                 margin-left: 15px; }
               body main .topContent-container-navigation-topRow-dropdowns-dropdown_button .icon-down-dir {
                 font-size: 1.3rem;
                 color: #fff; }
+
             body main .topContent-container-navigation-topRow-dropdowns-dropdown_value {
               display: none;
               position: absolute;
@@ -152,12 +163,7 @@ body main .topContent {
               padding-top: 40px;
               width: 100%;
               box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-              z-index: 5;
-              background-color: #fff;}
-
-              body main .topContent-container-navigation-topRow-dropdowns-dropdown_value:hover{
-                color: black;
-              }
+              background-color: white;}
               body main .topContent-container-navigation-topRow-dropdowns-dropdown_value a {
                 color: #333b4e;
                 padding: 6px 1px;
@@ -177,7 +183,10 @@ body main .topContent {
       body main .topContent-container-navigation-middleRow {
         display: flex;
         justify-content: space-between;
-        padding: 0 20px; }
+        flex-wrap: wrap;
+        padding: 0 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;}
         body main .topContent-container-navigation-middleRow-left {
           display: flex; }
           body main .topContent-container-navigation-middleRow-left-twitch {
@@ -198,7 +207,8 @@ body main .topContent {
               body main .topContent-container-navigation-middleRow-left-twitch_icon .icon-twitch {
                 color: blueviolet; }
         body main .topContent-container-navigation-middleRow-right {
-          display: flex; }
+          display: flex;
+        flex-wrap: wrap}
           body main .topContent-container-navigation-middleRow-right_label {
             color: rgba(255,255,255,0.4);
             margin-right: 10px; }
@@ -226,5 +236,7 @@ body main .topContent {
             body main .topContent-container-navigation-bottomRow-linksContainer-link:hover {
               box-shadow: 0 0px 25px rgba(45, 200, 111, 0.35);
               color: #2dc86f; }
-
+            body main .topContent-container-navigation-bottomRow-linksContainer-link i {
+              font-style: normal;
+            }
 /*# sourceMappingURL=main.css.map */
